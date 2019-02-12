@@ -1,0 +1,18 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=false
+
+[entry]
+
+OSX.64="res://bin/osx/libgdjavascript.dylib"
+Windows.64="res://bin/win64/libgdjavascript.dll"
+X11.64="res://bin/x11/libgdjavascript.so"
+
+[dependencies]
+
+OSX.64=[  ]
+Windows.64=[  ]
+X11.64=[ "res://bin/x11/libv8_monolith.a" ]

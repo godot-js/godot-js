@@ -1,0 +1,15 @@
+{
+  "name": "gdnative_cpp_example",
+  "version": "1.0.0",
+  "description": "GDNative C++ Example ====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "dependencies": {
+  }
+}
