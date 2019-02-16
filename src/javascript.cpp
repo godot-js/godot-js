@@ -1,7 +1,7 @@
 #include "javascript.h"
 #include <iostream>
 #include "String.hpp"
-#include "javascript-adapter.h"
+#include "duktape-adapter.h"
 
 using namespace godot;
 
@@ -24,7 +24,7 @@ void GDJavaScript::_init() {
     Godot::print("GDJavaScript(): init()");
     // fprintf(stderr, "GDJavaScript(): init()");
 
-    JSAdapter adapter;
+    DukTapeAdapter adapter;
     adapter.init();
 }
 

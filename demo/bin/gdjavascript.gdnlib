@@ -13,6 +13,6 @@ X11.64="res://bin/x11/libgdjavascript.so"
 
 [dependencies]
 
-OSX.64=[  ]
+OSX.64=[ ]
 Windows.64=[  ]
-X11.64=[ "res://bin/x11/libv8_monolith.a" ]
+X11.64=[ ]
