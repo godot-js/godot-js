@@ -66,8 +66,8 @@ def make_gdnative_type(t):
 def generate_class_header(used_classes, c):
 
     source = []
-    source.append("#ifndef GODOT_CPP_" + strip_name(c["name"]).upper() + "_HPP")
-    source.append("#define GODOT_CPP_" + strip_name(c["name"]).upper() + "_HPP")
+    source.append("#ifndef GODOT_JS_" + strip_name(c["name"]).upper() + "_HPP")
+    source.append("#define GODOT_JS_" + strip_name(c["name"]).upper() + "_HPP")
     source.append("")
     source.append("")
     
@@ -183,7 +183,7 @@ def generate_class_header(used_classes, c):
 
 
     if class_name == "Object":
-        source.append("#ifndef GODOT_CPP_NO_OBJECT_CAST")
+        source.append("#ifndef GODOT_JS_NO_OBJECT_CAST")
         source.append("\ttemplate<class T>")
         source.append("\tstatic T *cast_to(const Object *obj);")
         source.append("#endif")
@@ -500,8 +500,8 @@ def generate_class_implementation(icalls, used_classes, c):
 def generate_icall_header(icalls):
     
     source = []
-    source.append("#ifndef GODOT_CPP__ICALLS_HPP")
-    source.append("#define GODOT_CPP__ICALLS_HPP")
+    source.append("#ifndef GODOT_JS__ICALLS_HPP")
+    source.append("#define GODOT_JS__ICALLS_HPP")
     
     source.append("")
     
