@@ -1,10 +1,10 @@
 
 Requirements
 ============
-Godot 3.1 build (https://downloads.tuxfamily.org/godotengine/3.1/beta1/)
-godot-cpp (https://github.com/GodotNativeTools/godot-cpp)
-DukTape (https://duktape.org/duktape-2.3.0.tar.xz)\
-dukglue (https://github.com/Aloshi/dukglue.git)
+Godot 3.1 build (https://downloads.tuxfamily.org/godotengine/3.1/beta1/)  
+godot-cpp (https://github.com/GodotNativeTools/godot-cpp)  
+DukTape (https://duktape.org/duktape-2.3.0.tar.xz)  
+dukglue (https://github.com/Aloshi/dukglue.git)  
 
 Setup
 =====
