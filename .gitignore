@@ -16,6 +16,8 @@ logs
 Thumbs.db
 godot_headers
 godot-cpp
+dukglue
+duktape*
 node_modules
 .vscode
 *.pyc
