@@ -100,8 +100,6 @@ else:
 cpp_library += '.' + str(bits)
 
 # make sure our binding library is properly includes
-#env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', 'spidermonkey/include/', 'spidermonkey/include/js/', 'spidermonkey/include/mozilla/', 'spidermonkey/include/unicode/', '../v8/include'])
-#env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', '../v8/include/', './duktape/src/', './dukglue/', './duktape/extras/logging/'])
 env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', './duktape/src/', './dukglue/', './duktape/extras/logging/', './duktape/extras/console/'])
 env.Append(LIBPATH=[cpp_bindings_path + 'bin/', './demo/bin'])
 
@@ -111,8 +109,7 @@ if env['platform'] == "osx":
 elif env['platform'] in ('x11', 'linux'):
     env.Append(LIBPATH=['./demo/bin/x11'])
 
-
-#env.Append(LIBS=[cpp_library, 'libmozjs-52', 'libmozglue', 'libmemory', 'libv8_monolith'])
+# link shared libs
 env.Append(LIBS=[cpp_library, 'pthread'])
 
 duktape_lib = File('./demo/bin/osx/duktape.a')
@@ -121,10 +118,9 @@ duk_console_lib = File('./demo/bin/osx/duk_console.a')
 
 if env['platform'] == "osx":
     env.Append(LIBS=[duktape_lib, duk_logger_lib, duk_console_lib])
-    #env.Append(LIBS=['libv8_libbase.a', 'libv8_libplatform.a', 'libduktape_logging'])
 
-#elif env['platform'] in ('x11', 'linux'):
-#    env.Append(LIBS=['libv8_monolith'])
+elif env['platform'] in ('x11', 'linux'):
+    env.Append(LIBS=[duktape_lib, duk_logger_lib, duk_console_lib])
 
 #env.Append(LINKFLAGS=[
 #    '-Wl,-rpath,\'$$ORIGIN\''
@@ -137,8 +133,6 @@ sources = Glob('src/*.cpp')
 # generated source to compile
 # add_sources(sources, 'src/core', 'cpp')
 # add_sources(sources, 'src/gen', 'cpp')
-#add_sources(sources, 'duktape/src', 'c')
-#add_sources(sources, 'duktape/extras/logging', 'c')
 add_sources(sources, 'dukglue', 'cpp')
 
 library = env.SharedLibrary(target=env['target_path'] + env['target_name'] , source=sources)
