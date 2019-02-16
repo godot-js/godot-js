@@ -43,14 +43,6 @@ cp duktape.a duktape_logging.a duk_console.a ../demo/bin/x11/
 cd ..
 ```
 
-dukglue
--------
-From the godot directory, fetch the dukglue repo:
-
-```
-git clone https://github.com/Aloshi/dukglue.git
-```
-
 Building
 ========
 
