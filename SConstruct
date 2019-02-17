@@ -100,7 +100,7 @@ else:
 cpp_library += '.' + str(bits)
 
 # make sure our binding library is properly includes
-env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', './duktape/src/', './dukglue/', './duktape/extras/logging/', './duktape/extras/console/'])
+env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', './duktape/src/', './dukglue/include/dukglue/', './duktape/extras/logging/', './duktape/extras/console/'])
 env.Append(LIBPATH=[cpp_bindings_path + 'bin/', './demo/bin'])
 
 if env['platform'] == "osx":
