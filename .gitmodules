@@ -4,3 +4,7 @@
 [submodule "dukglue"]
 	path = dukglue
 	url = https://github.com/Aloshi/dukglue.git
+[submodule "duktape"]
+	path = duktape
+	url = https://github.com/svaarala/duktape.git
+	branch = v2.3-maintenance

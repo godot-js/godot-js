@@ -29,22 +29,15 @@ Build the godot-cpp bindings:
 
 DukTape
 -------
-unxz your DukTape bundle inside the godot-js directory:
-
-`
-unxz duktape-2.3.0
-cd duktape-2.3.0
 
 # build static libs for duktape
-../duktape_build.sh
+./duktape_build.sh
 
 # for OSX
-cp duktape.a duktape_logging.a duk_console.a ../demo/bin/osx/
+cp duktape/duktape.a duktape/duktape_logging.a duktape/duk_console.a ../demo/bin/osx/
 
 # for Linux
-cp duktape.a duktape_logging.a duk_console.a ../demo/bin/x11/
-
-cd ..
+cp duktape/duktape.a duktape/duktape_logging.a duktape/duk_console.a ../demo/bin/x11/
 `
 
 Building
