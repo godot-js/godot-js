@@ -6,28 +6,32 @@ godot-cpp (https://github.com/GodotNativeTools/godot-cpp)
 DukTape (https://duktape.org/duktape-2.3.0.tar.xz)  
 dukglue (https://github.com/Aloshi/dukglue.git)  
 
+Tools
+=====
+Developed with VSCode. Example template with include paths is called `c_cpp_properties.json.template` and can be copied to your .vscode directory as `c_cpp_properties.json`.
+
 Setup
 =====
 
 Godot
 -----
-Place the Godot binary on your path as ```godot```.
+Place the Godot binary on your path as `godot`.
 
 godot-js
 --------
-Fetch this repository with --recursive or fetch the submodules after checkout with ```git submodule update --init --recursive```.
+Fetch this repository with --recursive or fetch the submodules after checkout with `git submodule update --init --recursive`.
 
 Build the godot-cpp bindings:
 
-```
+`
 ./generate-compile-bindings.sh
-```
+`
 
 DukTape
 -------
 unxz your DukTape bundle inside the godot-js directory:
 
-```
+`
 unxz duktape-2.3.0
 cd duktape-2.3.0
 
@@ -41,20 +45,20 @@ cp duktape.a duktape_logging.a duk_console.a ../demo/bin/osx/
 cp duktape.a duktape_logging.a duk_console.a ../demo/bin/x11/
 
 cd ..
-```
+`
 
 Building
 ========
 
 SCons is already configured to include the headers and link to the static libs we just built, which we can kick off with:
 
-```
+`
 # for osx
 ./build.sh osx
 
 # for x11 / linux
 ./build x11
-```
+`
 
-This will generate demo/bin/<PLATFORM>/libgdjavascript.(so|dylib), while is loaded into your godot project. A demo godot project is included in demo/ which you can open and run. Currently, the library only wires up console for logging and will execute ```index.js``` in the main project directory (e.g. demo/index.js).
+This will generate demo/bin/<PLATFORM>/libgdjavascript.(so|dylib), while is loaded into your godot project. A demo godot project is included in demo/ which you can open and run. Currently, the library only wires up console for logging and will execute `index.js` in the main project directory (e.g. demo/index.js).
 

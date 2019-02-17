@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                ".", 
+                "godot-cpp/godot_headers/", "godot-cpp/include/", 
+                "godot-cpp/include/core/", "godot-cpp/include/gen/", 
+                "duktape/src", "duktape/extras/logging/", "duktape/extras/console/", "dukglue/include/dukglue/",
+                "spidermonkey/include/", "spidermonkey/include/js/"
+            ]
+        }
+    ],
+    "version": 4
+}
