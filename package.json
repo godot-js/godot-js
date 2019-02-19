@@ -1,14 +1,14 @@
 {
-  "name": "gdnative_cpp_example",
+  "name": "godot-js",
   "version": "1.0.0",
-  "description": "GDNative C++ Example ====================",
+  "description": "Gotot bindings for JS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp rebuild"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "gypfile": true,
   "dependencies": {
   }
